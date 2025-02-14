@@ -1,0 +1,26 @@
+{
+    "id": "ITEM_CONDITION",
+    "name": "Condición del ítem",
+    "tags": {
+        "hidden": true
+    },
+    "hierarchy": "ITEM",
+    "relevance": 2,
+    "value_type": "list",
+    "values": [
+        {
+            "id": "2230284",
+            "name": "Nuevo"
+        },
+        {
+            "id": "2230581",
+            "name": "Usado"
+        },
+        {
+            "id": "2230582",
+            "name": "Reacondicionado"
+        }
+    ],
+    "attribute_group_id": "OTHERS",
+    "attribute_group_name": "Otros"
+}
