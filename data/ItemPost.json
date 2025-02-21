@@ -1,0 +1,13 @@
+{
+    "id": "MLB1374737433",
+    "site_id": "MLB",
+    "title": "Item De Teste - Não Comprar",
+    "base_price": 10,
+    "initial_quantity": 0,
+    "available_quantity": 0,
+    "sold_quantity": 0,
+    "status": "paused",
+    "sub_status": [
+        "out_of_stock"
+    ]
+}

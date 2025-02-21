@@ -3,15 +3,23 @@
 require __DIR__ . '/../vendor/autoload.php';
 
 use Neuralpin\HTTPRouter\Router;
-use Ulisesrendon\Melifakeendpoint\Category\Controller\CategoryController;
-use Ulisesrendon\Melifakeendpoint\Product\Controller\ItemController;
+use Neuralpin\HTTPRouter\Response;
+use Neuralpin\HTTPRouter\Helper\TemplateRender;
 
 $Router = new Router;
+
 $Router->any('/', fn() => 'Hello world!');
 
-$Router->get('/item/:id', [ItemController::class, 'getItem']);
-$Router->post('/item/:id', [ItemController::class, 'postItem']);
-$Router->get('/categories/:id/attributes', [CategoryController::class, 'getCategoryAttributes']);
+$Router->get('/item/:id', fn() => Response::json(
+    json_decode((string) new TemplateRender(__DIR__ . '/../data/ItemGet.json'))
+));
+$Router->post('/item/:id', fn() => Response::json(
+    json_decode((string) new TemplateRender(__DIR__ . '/../data/ItemPost.json'))
+));
+
+$Router->get('/categories/:id/attributes', fn() => Response::json(
+    json_decode((string) new TemplateRender(__DIR__ . '/../data/CategoryAttributesGet.json'))
+));
 
 try {
 
